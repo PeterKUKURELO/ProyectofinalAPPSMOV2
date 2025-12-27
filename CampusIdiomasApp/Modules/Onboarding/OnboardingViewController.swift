@@ -34,7 +34,9 @@ final class OnboardingViewController: UIViewController {
 
     private func updateButtons() {
         let isLast = (currentPage == pages.count - 1)
-        let arrow = UIImage(named: "rightArrow_1")
+        let arrow = UIImage(named: "rightArrow_1")?
+            .resized(to: CGSize(width: 22, height: 22))
+
 
         var config = nextButton.configuration ?? UIButton.Configuration.filled()
 
@@ -42,6 +44,14 @@ final class OnboardingViewController: UIViewController {
         config.background.backgroundColor = .white
         config.baseBackgroundColor = .white
         config.background.cornerRadius = 999
+
+        config.image = arrow
+        config.contentInsets = NSDirectionalEdgeInsets(
+            top: 16,
+            leading: 16,
+            bottom: 16,
+            trailing: 16
+        )
 
         if isLast {
             // 🔹 ÚLTIMA: solo texto "Empezar" en BOLD y visible
@@ -67,7 +77,11 @@ final class OnboardingViewController: UIViewController {
                 leading: 32,
                 bottom: 14,
                 trailing: 32
+                
             )
+            
+            
+
         }   else {
             // 🔹 PÁGINAS 1–2: solo flecha
             config.attributedTitle = nil
@@ -220,5 +234,15 @@ extension OnboardingViewController: UIScrollViewDelegate {
     func scrollViewDidEndScrollingAnimation(_ scrollView: UIScrollView) {
         let page = Int(round(scrollView.contentOffset.x / max(1, scrollView.bounds.width)))
         currentPage = max(0, min(page, pages.count - 1))
+    }
+}
+
+extension UIImage {
+    func resized(to size: CGSize) -> UIImage {
+        UIGraphicsBeginImageContextWithOptions(size, false, 0)
+        draw(in: CGRect(origin: .zero, size: size))
+        let image = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        return image ?? self
     }
 }

@@ -48,7 +48,7 @@ final class CarnetViewController: UIViewController {
         view.backgroundColor = .white
 
         // Header
-        headerBackgroundImageView.image = UIImage(named: "carnet_header")
+        headerBackgroundImageView.image = UIImage(named: "backgroundimg")
         headerBackgroundImageView.contentMode = .scaleAspectFill
         headerBackgroundImageView.clipsToBounds = true
 

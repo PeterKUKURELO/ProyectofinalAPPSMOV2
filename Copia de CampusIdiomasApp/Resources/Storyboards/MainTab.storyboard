@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Main Tab Bar Controller-->
+        <scene sceneID="LNw-2s-okj">
+            <objects>
+                <tabBarController storyboardIdentifier="MainTabBarController" id="2qt-uL-hAC" customClass="MainTabBarController" customModule="CampusIdiomasApp" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="bbk-sU-VLp">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="Yi0-KS-H40" kind="relationship" relationship="viewControllers" id="USp-k4-8i1"/>
+                        <segue destination="mqS-3e-nuP" kind="relationship" relationship="viewControllers" id="eoh-lx-bTH"/>
+                        <segue destination="LdW-oQ-L3q" kind="relationship" relationship="viewControllers" id="J2B-AB-ErJ"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="g5v-Og-VHF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1805" y="117"/>
+        </scene>
+        <!--Home-->
+        <scene sceneID="Cpx-yl-Dm9">
+            <objects>
+                <viewController id="Yi0-KS-H40" customClass="HomeViewController" customModule="CampusIdiomasApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="rc3-gp-Cgd">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="fA6-Ap-rdh"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Home" image="Home" id="aWt-ny-Mrc"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uOk-XQ-Peh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-377" y="-409"/>
+        </scene>
+        <!--Carnet-->
+        <scene sceneID="cfb-SC-Qo7">
+            <objects>
+                <viewController id="mqS-3e-nuP" customClass="CarnetViewController" customModule="CampusIdiomasApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="gE7-vR-CsZ">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="83d-BU-Qcm"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Carnet" image="User" id="Qx5-pU-kQk"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cH3-Uj-EIR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-378" y="254"/>
+        </scene>
+        <!--Ajustes-->
+        <scene sceneID="6mV-Mj-eSs">
+            <objects>
+                <viewController storyboardIdentifier="SettingsViewController" id="LdW-oQ-L3q" customClass="SettingsViewController" customModule="CampusIdiomasApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="WNS-gl-WdT">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="4QA-TL-Zkk"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Ajustes" image="Config" id="9Wo-eV-WYg"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cwo-0g-DUK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-378" y="953"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Config" width="512" height="512"/>
+        <image name="Home" width="512" height="512"/>
+        <image name="User" width="512" height="512"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
